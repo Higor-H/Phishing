@@ -1,71 +1,75 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
+
 
 /**/
 
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    /*overflow-x: hidden;*/
+    z-index: 2;
+}
+
+
+html{
+    font-size: 62.5%;
+
+}
+
+
+pre{
+    font-size: 80px;
+}
+
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+    backdrop-filter: blur(2px);
+}
+
+
+/*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa*/
 *::selection {
     color: #1a1a35;
     background-color: #ffffff;
 }
 
-
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
 body{
-    background-color: #1a1a35;
+    background-color: #000000;
     color: azure;
 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'Nunito', sans-serif; 
     font-size: 50px;
+
+    
 }
+
+body {
+    background-image: url(../img/bkr.gif);
+   /* background-size: cover;*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100vw;
+    background-attachment: fixed;
+}
+
+
+/* body {
+    background-image: url(../img/bkr.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100vw;
+    background-attachment: fixed;
+} */
 
 /* .pop img{
     width: 300px;
@@ -81,6 +85,7 @@ body{
     z-index: 9999;
     position: fixed;
     top: 0px;
+    box-shadow: #1a1a35;
 }
 
 /* .p1{
@@ -89,3 +94,157 @@ body{
     position: fixed;
 } */
 
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+    border-bottom: #1a1a35;
+    
+}
+
+
+.logo{
+    font-size: 20px;
+    font-weight: 600;
+    cursor: default; /*quando musar a pagina ela vai junto*/
+    color: white;
+}
+
+.navbar a{
+    font-size: 20px;
+    color: #7c7c86;
+    margin-left: 3rem;
+}
+
+.navbar a:hover,
+.navbar a.ativa{
+    color: white;
+}
+
+
+
+
+.home{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    color: white;
+   
+    justify-content: center;
+
+}
+
+.home img{
+    width: 100vw;
+}
+
+.opa{
+    width: 100vw;
+    z-index: 1;
+}
+
+
+
+.p10 img, .p9 img, .p8 img, .p7 img, .p5 img, .p3 img{
+    height: 100vh;
+    width: auto;
+}
+
+.banner{
+    background: #000000;
+}
+
+.banner img{
+    height: 70vh;
+}
+
+
+
+.cabecalho{
+    font-size: 50px;
+}
+
+
+.sobre-conteiner{
+    font-size: 30px;
+}
+
+
+.sobre-img img{
+    width: 500px;
+    margin-right: 40px;
+}
+
+.sobre{
+    display: flex;
+    background: #000000;
+}
+
+.banner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+li{
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+}
+
+.fontes a{
+    display: flex;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    flex-direction: column;
+    padding: 20px;
+}
+.fontes a:hover{
+    text-decoration: underline;
+}
+
+
+.lista a:hover{
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+@media (max-width: 960px) {
+    .header{
+        padding: 1.5rem 3%;
+    }
+}
+
+
+@media (max-width: 750px) {
+    /* ativando o menu icones*/
+       .navbar{
+           position: absolute;
+           top: 100%;
+           left: 0;
+           width: 100%;
+           padding: 1rem 3%;
+           background: var(--bg-color);
+           border-top: .1rem solid rgba(0,0,0,.2);
+           box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+           display: none;
+       }
+       .navbar a{
+           display: block;
+           font-size: 2rem;
+           margin: 3rem 0;
+       }
+   
+       .navbar.ativa{
+           display: block;
+       }}
